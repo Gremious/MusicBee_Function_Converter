@@ -1,6 +1,6 @@
+use fileHelper;
 use std::fs::File;
 use std::io::{BufReader, Read};
-use fileHelper;
 
 pub(crate) fn readFile(input_file: File) -> String {
     let tempFile: File = input_file;
