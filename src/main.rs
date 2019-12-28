@@ -3,8 +3,7 @@ use std::io::{BufReader, Read};
 use std::io::{BufWriter, Write};
 
 fn main() {
-    let mainFile = File::open("src/textfile.txt").expect("Unable to open file");
-
+    let mainFile = File::open("src/files/textfile.txt").expect("Unable to open file");
     println!("{}", readFile(mainFile));
 }
 
