@@ -1,6 +1,4 @@
-/*
-
-use rand::{Rng, SeedableRng, StdRng};
+use fileHelper;
 
 fn writeToFile(input_file: File, input_text: String){
     let inputText = "Some data! Text!\n Woo!";
@@ -13,4 +11,4 @@ fn writeToFile(input_file: File, input_text: String){
     f.write_all(ourOutputText.as_bytes())
         .expect("Unable to write data");
 }
-*/
+
