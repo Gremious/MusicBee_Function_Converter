@@ -1,8 +1,7 @@
-use fileHelper;
 use std::fs::File;
 use std::io::{BufReader, Read};
 
-pub(crate) fn readFile(input_file: File) -> String {
+pub fn read_file(input_file: File) -> String {
     let tempFile: File = input_file;
     let mut ourOutputText = String::new(); // Sting we'll return
 
