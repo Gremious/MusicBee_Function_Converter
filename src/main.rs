@@ -31,33 +31,6 @@ fn main() -> std::io::Result<()> {
     Ok(())
 }
 
-/*
-// Thx stack overflow
-use notify::{Watcher, RecursiveMode, RawEvent, op};
-
-fn wait_until_file_created(file_path: PathBuf) -> Result<(), Box<Error>> {
-    let (tx, rx) = mpsc::channel();
-    let mut watcher = notify::raw_watcher(tx).expect("something broke");
-    // Watcher can't be registered for file that don't exists.
-    // I use its parent directory instead, because I'm sure that it always exists
-    let file_dir = file_path.parent().unwrap();
-    watcher.watch(&file_dir, RecursiveMode::NonRecursive).expect("something broke");
-    if !file_path.exists() {
-        loop {
-            match rx.recv_timeout(Duration::from_secs(2)).expect("something broke") {
-                RawEvent { path: Some(p), op: Ok(op::CREATE), .. } =>
-                    if p == file_path {
-                        break
-                    },
-                _ => continue,
-            }
-        }
-    }
-    watcher.unwatch(file_dir).expect("something broke");
-    Ok(())
-}
-*/
-
 #[cfg(test)]
 mod tests {
     #[test]
