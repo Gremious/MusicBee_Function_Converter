@@ -1,19 +1,8 @@
+#![warn(clippy::all, clippy::pedantic)]
 use crate::{reader::*, writer::*};
 use std::{fs::File, io::Read};
 pub mod reader;
 pub mod writer;
-
-extern crate rand;
-use rand::distributions::Alphanumeric;
-use rand::Rng;
-
-pub fn print_random_alphanum() -> String {
-    let outputString = rand::thread_rng()
-        .sample_iter(&Alphanumeric)
-        .take(10)
-        .collect::<String>();
-    outputString
-}
 
 fn main() {
     let mut openFile = File::open("src/files/textfile.txt").expect("Unable to open file");
