@@ -12,4 +12,4 @@ out/
 .settings/
 
 # Project
-src/files/textfile2.txt
+/files

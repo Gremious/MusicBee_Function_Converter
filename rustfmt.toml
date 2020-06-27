@@ -1,7 +1,5 @@
 # commented out implies  default
 # indented items are non-default, indented so they're more convenient to comment out if needed
-
-required_version = "1.4.15"
 unstable_features = true
 edition = "2018"
 newline_style = "Unix"

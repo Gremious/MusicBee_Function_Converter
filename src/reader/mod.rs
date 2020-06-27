@@ -10,3 +10,4 @@ pub fn read_file(input_file: File) -> String {
         .expect("Unable to read string");
     our_output_text
 }
+
