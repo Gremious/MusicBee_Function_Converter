@@ -1,3 +1,8 @@
+pub mod reader;
+pub mod writer;
+use crate::function_converter::reader::*;
+use crate::function_converter::writer::*;
+
 extern crate rand;
 use rand::distributions::Alphanumeric;
 use rand::Rng;
