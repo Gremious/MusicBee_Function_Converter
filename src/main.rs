@@ -14,6 +14,7 @@ pub mod writer;
 
 fn main() -> std::io::Result<()> {
     // Open the file that we're going to read, in read/append mode. Create it if it doesn't exist.
+    fs::create_dir_all(format!("{}/files/", env::current_dir()?.display()))?;
     let path = format!("{}/files/mb_script.txt", env::current_dir()?.display());
     let mut open_file = OpenOptions::new().append(true).create(true).read(true).open(&path)?;
 
