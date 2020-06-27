@@ -5,16 +5,16 @@ pub mod reader;
 pub mod writer;
 
 fn main() {
-    let mut openFile = File::open("src/files/textfile.txt").expect("Unable to open file");
-    let mut createdFile = File::create("src/files/textfile2.txt").expect("Unable to open file");
-    let mut file1Text = String::new();
-    let mut file2Text = String::new();
-    file2Text = "This is a test string".parse().unwrap();
+    let mut open_file = File::open("src/files/textfile.txt").expect("Unable to open file");
+    let created_file = File::create("src/files/textfile2.txt").expect("Unable to open file");
+    let mut file1text = String::new();
+    let mut file2text = String::new();
+    file2text = "This is a test string".parse().unwrap();
 
-    openFile
-        .read_to_string(&mut file1Text)
+    open_file
+        .read_to_string(&mut file1text)
         .expect("Unable to read the file");
-    println!("{}", file1Text);
+    println!("{}", file1text);
 
-    writer::writeToFile(createdFile, file2Text);
+    writer::write_to_file(created_file, file2text);
 }

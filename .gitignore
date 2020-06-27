@@ -10,3 +10,6 @@ out/
 .classpath
 .project
 .settings/
+
+# Project
+src/files/textfile2.txt

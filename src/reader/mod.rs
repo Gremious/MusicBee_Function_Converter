@@ -2,11 +2,11 @@ use std::fs::File;
 use std::io::{BufReader, Read};
 
 pub fn read_file(input_file: File) -> String {
-    let tempFile: File = input_file;
-    let mut ourOutputText = String::new(); // Sting we'll return
+    let temp_file: File = input_file;
+    let mut our_output_text = String::new(); // Sting we'll return
 
-    let mut br = BufReader::new(tempFile);
-    br.read_to_string(&mut ourOutputText)
+    let mut br = BufReader::new(temp_file);
+    br.read_to_string(&mut our_output_text)
         .expect("Unable to read string");
-    ourOutputText
+    our_output_text
 }
